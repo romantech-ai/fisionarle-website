@@ -50,13 +50,15 @@ export function Footer() {
           {/* Brand - Takes more space */}
           <div className="col-span-2 lg:col-span-4">
             <Link href="/" className="inline-flex items-center gap-3 mb-6">
-              <Image
-                src="/images/nexum-fisioterapia-logo.png"
-                alt="Nexum Fisioterapia"
-                width={48}
-                height={48}
-                className="w-12 h-12 rounded-full"
-              />
+              <div className="bg-white/95 rounded-xl p-1.5">
+                <Image
+                  src="/images/nexum-fisioterapia-logo.png"
+                  alt="Nexum Fisioterapia"
+                  width={44}
+                  height={44}
+                  className="w-11 h-11 object-contain"
+                />
+              </div>
               <span className="text-2xl font-bold font-heading text-white">
                 Nexum Fisioterapia
               </span>

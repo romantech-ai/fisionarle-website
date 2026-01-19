@@ -48,15 +48,15 @@ export function Navbar() {
           }`}>
             {/* Logo */}
             <Link href="/" className="relative z-50 flex items-center gap-3">
-              <div className={`rounded-full p-1 transition-all ${
-                scrolled ? 'bg-transparent' : 'bg-white shadow-md'
+              <div className={`overflow-hidden transition-all ${
+                scrolled ? 'bg-transparent' : 'bg-white/95 shadow-lg rounded-xl p-1'
               }`}>
                 <Image
                   src="/images/nexum-fisioterapia-logo.png"
                   alt="Nexum Fisioterapia"
-                  width={36}
-                  height={36}
-                  className="w-9 h-9 rounded-full"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 object-contain"
                 />
               </div>
               <span className={`text-xl font-bold font-heading transition-colors ${

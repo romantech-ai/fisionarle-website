@@ -1,7 +1,6 @@
 'use client'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
-import Image from 'next/image'
 
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -17,23 +16,27 @@ export function Hero() {
 
   return (
     <section ref={containerRef} className="relative min-h-[100svh] overflow-hidden">
-      {/* Background Image with Parallax */}
+      {/* Background - Elegant Gradient */}
       <motion.div
         style={{ y }}
         className="absolute inset-0 z-0"
       >
-        {/* Banner Image */}
-        <Image
-          src="/images/banner.jpg"
-          alt="Nexum Fisioterapia - Fisioterapia especializada"
-          fill
-          priority
-          className="object-cover object-center"
-        />
+        {/* Base gradient - tonos beige/taupe elegantes */}
+        <div className="absolute inset-0 bg-gradient-to-br from-stone-800 via-stone-700 to-stone-900" />
 
-        {/* Gradient overlays for text readability - Nueva paleta beige/taupe */}
-        <div className="absolute inset-0 bg-gradient-to-r from-stone-900/90 via-stone-800/70 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-stone-900/80 via-transparent to-stone-900/30" />
+        {/* Decorative gradient overlays */}
+        <div className="absolute inset-0 bg-gradient-to-r from-amber-900/20 via-transparent to-stone-800/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-amber-800/10" />
+
+        {/* Subtle pattern overlay */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        }} />
+
+        {/* Decorative circles */}
+        <div className="absolute top-20 right-20 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-40 left-10 w-80 h-80 bg-stone-500/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-amber-700/5 rounded-full blur-2xl" />
       </motion.div>
 
       {/* Content */}
