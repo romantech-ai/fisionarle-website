@@ -9,12 +9,12 @@ const servicios = [
       </svg>
     ),
     title: 'Fisioterapia Manual',
-    description: 'Técnicas manuales especializadas para el alivio del dolor y la recuperación funcional.',
+    description: 'Máster en Fisioterapia Manual del Aparato Locomotor. Técnicas avanzadas para el alivio del dolor.',
     features: [
-      'Masaje terapéutico y descontracturante',
-      'Movilizaciones articulares',
-      'Estiramientos asistidos',
+      'Terapia manual articular',
+      'Movilizaciones y manipulaciones',
       'Liberación miofascial',
+      'Tratamiento de tejido blando',
     ],
   },
   {
@@ -23,29 +23,29 @@ const servicios = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
     ),
-    title: 'Tratamiento del Dolor',
-    description: 'Abordaje integral del dolor agudo y crónico con resultados duraderos.',
+    title: 'Fisioterapia Invasiva',
+    description: 'Técnicas ecoguiadas de última generación para resultados más rápidos y efectivos.',
     features: [
-      'Cervicalgias y dolor de cuello',
-      'Lumbalgias y ciáticas',
-      'Mareos y vértigos cervicales',
-      'Cefaleas tensionales',
-      'Dolor de hombro, codo, rodilla',
+      'Punción seca de puntos gatillo',
+      'Electrólisis percutánea (EPI/EPTE)',
+      'Neuromodulación ecoguiada',
+      'Ecografía diagnóstica',
     ],
   },
   {
     icon: (
       <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.5c-1.5 0-2.5 1-2.5 2.5 0 1.5 1 2.5 2.5 2.5s2.5-1 2.5-2.5c0-1.5-1-2.5-2.5-2.5z" />
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11c0 0 1 1 1 3.5 0 2.5-1.5 5-4 5s-4-2.5-4-5c0-2.5 1-3.5 1-3.5" />
       </svg>
     ),
-    title: 'Técnicas Especializadas',
-    description: 'Las últimas técnicas y tecnologías para un tratamiento completo y efectivo.',
+    title: 'Suelo Pélvico y Embarazo',
+    description: 'Especialización en salud de la mujer: embarazo, postparto y disfunciones del suelo pélvico.',
     features: [
-      'Punción seca',
-      'Electroterapia',
-      'Termoterapia',
-      'Vendaje neuromuscular (kinesiotaping)',
+      'Preparación al parto',
+      'Recuperación postparto',
+      'Incontinencia urinaria',
+      'Diástasis abdominal',
     ],
   },
   {
@@ -55,12 +55,12 @@ const servicios = [
       </svg>
     ),
     title: 'Pilates Terapéutico',
-    description: 'El complemento perfecto para mantener y potenciar los resultados de tu tratamiento.',
+    description: 'Ejercicio terapéutico personalizado para rehabilitación, prevención y mejora postural.',
     features: [
       'Clases grupales reducidas',
-      'Pilates suelo',
-      'Mejora postural',
+      'Pilates suelo terapéutico',
       'Fortalecimiento del core',
+      'Ejercicio terapéutico',
     ],
   },
 ]

@@ -77,8 +77,8 @@ export function PorQueElegirnos() {
               <span className="text-primary-500"> cuidamos de ti</span>
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              En Fisionarle creemos que la fisioterapia va más allá de los tratamientos.
-              Es acompañar, escuchar y trabajar juntos por tu bienestar.
+              En Nexum Fisioterapia creemos que la fisioterapia va más allá de los tratamientos.
+              Es acompañar, escuchar y trabajar juntos por tu bienestar con técnicas basadas en la evidencia.
             </p>
 
             {/* Image placeholder */}

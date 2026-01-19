@@ -23,8 +23,8 @@ const testimonios = [
   },
   {
     id: 4,
-    name: 'Jezabel Ávila',
-    content: 'Pilar es un amor de persona pero con los niños se nota que es pura vocación. Me trató el cólico del lactante y mi hijo nunca lloró, él estaba tranquilo porque ella lo estaba. Sin duda la mejor.',
+    name: 'María G.',
+    content: 'El tratamiento de suelo pélvico ha sido una revelación. Profesionalidad, técnicas avanzadas y un trato cercano que te hace sentir cómoda desde el primer momento. Muy recomendable para embarazadas y postparto.',
     rating: 5,
     featured: true,
   },
@@ -36,21 +36,21 @@ const testimonios = [
   },
   {
     id: 6,
-    name: 'Mar AGAR',
-    content: 'Una experiencia 100% recomendable. Con Pilar he podido sentirme muchísimo mejor de mis molestias cervicales. Además de ser estupenda profesional tiene un trato increíble, siempre con una sonrisa.',
+    name: 'Laura M.',
+    content: 'La punción seca y la electrólisis han sido clave para recuperarme de mi tendinitis crónica. Por fin un centro con técnicas avanzadas y profesionales formados en las últimas novedades.',
     rating: 5,
   },
   {
     id: 7,
     name: 'Inma Mansilla',
-    content: 'Muy profesional y cercana. Lo que más me ha gustado es que te explica todo lo que te hace y porqué, te da consejos para la vida diaria y confías en ella desde el minuto uno. Mi bebé está deseando ir.',
+    content: 'Muy profesional y cercana. Lo que más me ha gustado es que te explica todo lo que te hace y porqué, te da consejos para la vida diaria y confías desde el minuto uno. Totalmente recomendable.',
     rating: 5,
     featured: true,
   },
   {
     id: 8,
     name: 'Raquel Jiménez',
-    content: 'Son unas grandísimas profesionales. Empecé pilates terapéutico y mejoré de las lumbares a partir del tercer mes. En septiembre comenzaré con clases de Pilates máquina. Pilar y Nani os estoy muy agradecida.',
+    content: 'Son unas grandísimas profesionales. Empecé pilates terapéutico y mejoré de las lumbares a partir del tercer mes. El ejercicio terapéutico ha sido fundamental para mi recuperación.',
     rating: 5,
   },
 ]
@@ -67,7 +67,7 @@ export function Testimonios() {
             viewport={{ once: true }}
             className="max-w-xl"
           >
-            <span className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 border border-emerald-100 rounded-full text-sm font-medium text-emerald-700 mb-6">
+            <span className="inline-flex items-center gap-2 px-4 py-2 bg-accent-50 border border-accent-100 rounded-full text-sm font-medium text-accent-700 mb-6">
               <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
                 <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
@@ -116,14 +116,14 @@ export function Testimonios() {
               transition={{ delay: index * 0.1 }}
               className={`group relative ${
                 testimonio.featured
-                  ? 'md:row-span-2 bg-gradient-to-br from-emerald-600 to-teal-700 text-white'
-                  : 'bg-white border border-gray-100 hover:border-emerald-200'
+                  ? 'md:row-span-2 bg-gradient-to-br from-primary-600 to-accent-600 text-white'
+                  : 'bg-white border border-gray-100 hover:border-accent-200'
               } rounded-3xl p-8 transition-all duration-300 hover:shadow-xl`}
             >
               {/* Quote Icon */}
               <svg
                 className={`w-10 h-10 mb-6 ${
-                  testimonio.featured ? 'text-white/20' : 'text-emerald-100'
+                  testimonio.featured ? 'text-white/20' : 'text-accent-100'
                 }`}
                 fill="currentColor"
                 viewBox="0 0 24 24"
@@ -159,7 +159,7 @@ export function Testimonios() {
                 <div className={`w-12 h-12 rounded-full flex items-center justify-center text-lg font-bold ${
                   testimonio.featured
                     ? 'bg-white/20 text-white'
-                    : 'bg-emerald-100 text-emerald-700'
+                    : 'bg-accent-100 text-accent-700'
                 }`}>
                   {testimonio.name.charAt(0)}
                 </div>
@@ -200,7 +200,7 @@ export function Testimonios() {
           className="mt-16 text-center"
         >
           <a
-            href="https://www.google.com/maps/place/Fisionarle"
+            href="https://www.google.com/maps/place/Nexum+Fisioterapia"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-8 py-4 bg-gray-900 text-white rounded-full font-medium hover:bg-gray-800 transition-colors"

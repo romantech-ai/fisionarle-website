@@ -27,7 +27,7 @@ export function Navbar() {
     return () => { document.body.style.overflow = '' }
   }, [mobileOpen])
 
-  const whatsappUrl = 'https://wa.me/34613004617?text=' + encodeURIComponent('Hola, me gustaría pedir cita en Fisionarle')
+  const whatsappUrl = 'https://wa.me/34613005617?text=' + encodeURIComponent('Hola, me gustaría pedir cita en Nexum Fisioterapia')
 
   return (
     <>
@@ -52,17 +52,17 @@ export function Navbar() {
                 scrolled ? 'bg-transparent' : 'bg-white shadow-md'
               }`}>
                 <Image
-                  src="/images/logo.png"
-                  alt="Fisionarle"
+                  src="/images/nexum-fisioterapia-logo.png"
+                  alt="Nexum Fisioterapia"
                   width={36}
                   height={36}
-                  className="w-9 h-9"
+                  className="w-9 h-9 rounded-full"
                 />
               </div>
               <span className={`text-xl font-bold font-heading transition-colors ${
                 scrolled ? 'text-gray-900' : 'text-white'
               }`}>
-                Fisionarle
+                Nexum
               </span>
             </Link>
 
@@ -84,13 +84,13 @@ export function Navbar() {
             {/* Desktop CTA */}
             <div className="hidden lg:flex items-center gap-4">
               <a
-                href="tel:+34613004617"
+                href="tel:+34613005617"
                 className={`flex items-center gap-2 text-sm font-medium transition-colors ${
-                  scrolled ? 'text-gray-600 hover:text-emerald-600' : 'text-white/80 hover:text-white'
+                  scrolled ? 'text-gray-600 hover:text-primary-600' : 'text-white/80 hover:text-white'
                 }`}
               >
-                <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
-                613 00 46 17
+                <span className="w-2 h-2 bg-accent-500 rounded-full animate-pulse" />
+                613 00 56 17
               </a>
               <motion.a
                 href={whatsappUrl}
@@ -100,7 +100,7 @@ export function Navbar() {
                 whileTap={{ scale: 0.98 }}
                 className={`px-5 py-2.5 rounded-full font-medium text-sm transition-all ${
                   scrolled
-                    ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-500/25 hover:bg-emerald-600'
+                    ? 'bg-accent-600 text-white shadow-lg shadow-accent-500/25 hover:bg-accent-700'
                     : 'bg-white text-gray-900 hover:bg-white/90'
                 }`}
               >
@@ -183,7 +183,7 @@ export function Navbar() {
                   >
                     <Link
                       href={item.href}
-                      className="block py-4 text-3xl font-bold text-gray-900 hover:text-emerald-600 transition-colors"
+                      className="block py-4 text-3xl font-bold text-gray-900 hover:text-accent-600 transition-colors"
                       onClick={() => setMobileOpen(false)}
                     >
                       {item.label}
@@ -199,17 +199,17 @@ export function Navbar() {
                 className="mt-12 space-y-4"
               >
                 <a
-                  href="tel:+34613004617"
+                  href="tel:+34613005617"
                   className="flex items-center gap-3 text-lg text-gray-600"
                 >
-                  <span className="w-3 h-3 bg-emerald-500 rounded-full animate-pulse" />
-                  613 00 46 17
+                  <span className="w-3 h-3 bg-accent-500 rounded-full animate-pulse" />
+                  613 00 56 17
                 </a>
                 <a
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block w-full bg-emerald-500 text-white py-4 rounded-2xl font-semibold text-center text-lg"
+                  className="block w-full bg-accent-600 text-white py-4 rounded-2xl font-semibold text-center text-lg"
                 >
                   Reservar cita
                 </a>
@@ -218,7 +218,7 @@ export function Navbar() {
               {/* Decorative element */}
               <div className="absolute bottom-8 left-8 right-8">
                 <p className="text-sm text-gray-400">
-                  Fisioterapia con alma en Alcázar de San Juan
+                  Fisioterapia integral en Alcázar de San Juan
                 </p>
               </div>
             </motion.div>

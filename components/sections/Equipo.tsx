@@ -1,18 +1,23 @@
 'use client'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const equipo = [
   {
-    name: 'Nani',
-    role: 'Fisioterapeuta',
-    quote: 'La vocación por ayudar a mis pacientes es lo que me impulsa cada día',
-    description: 'Especialista con amplia experiencia en fisioterapia manual y tratamiento del dolor. Su dedicación y calidad humana la convierten en una profesional excepcional.',
+    name: 'Inés',
+    role: 'Directora y Fisioterapeuta',
+    image: '/images/inés.jpg',
+    quote: 'Cada paciente merece un tratamiento basado en la evidencia y adaptado a sus necesidades',
+    description: 'Especialista en suelo pélvico y embarazo, fisioterapia invasiva y pilates terapéutico. Máster en Fisioterapia Manual del Aparato Locomotor con formación en ecografía, neuromodulación percutánea ecoguiada, electrólisis y ATM.',
+    specialties: ['Suelo pélvico', 'Embarazo', 'Fisioterapia invasiva', 'Pilates terapéutico', 'ATM'],
   },
   {
-    name: 'Pilar',
+    name: 'Nani',
     role: 'Fisioterapeuta',
-    quote: 'Cada paciente es único y merece un tratamiento personalizado',
-    description: 'Reconocida por su profesionalidad y trato cercano. Formación continua en las últimas técnicas para ofrecer siempre lo mejor a sus pacientes.',
+    image: null,
+    quote: 'La vocación por ayudar a mis pacientes es lo que me impulsa cada día',
+    description: 'Especialista con amplia experiencia en fisioterapia manual y tratamiento del dolor. Su dedicación y calidad humana la convierten en una profesional excepcional.',
+    specialties: ['Fisioterapia manual', 'Tratamiento del dolor', 'Cervicalgias'],
   },
 ]
 
@@ -49,31 +54,53 @@ export function Equipo() {
               transition={{ delay: index * 0.2 }}
               className="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow"
             >
-              {/* Image placeholder */}
-              <div className="relative aspect-[4/3] bg-gradient-to-br from-primary-100 to-accent-100 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-24 h-24 mx-auto bg-white/50 rounded-full flex items-center justify-center mb-4">
-                    <svg className="w-12 h-12 text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
+              {/* Image */}
+              <div className="relative aspect-[4/3] bg-gradient-to-br from-primary-100 to-accent-100">
+                {member.image ? (
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover object-top"
+                  />
+                ) : (
+                  <div className="flex items-center justify-center h-full">
+                    <div className="text-center p-8">
+                      <div className="w-24 h-24 mx-auto bg-white/50 rounded-full flex items-center justify-center mb-4">
+                        <svg className="w-12 h-12 text-primary-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                        </svg>
+                      </div>
+                      <p className="text-primary-400 font-medium">Foto de {member.name}</p>
+                    </div>
                   </div>
-                  <p className="text-primary-400 font-medium">Foto de {member.name}</p>
-                  <p className="text-primary-300 text-sm">Recomendado: 400x300px</p>
-                </div>
+                )}
               </div>
 
               {/* Content */}
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-gray-900 mb-1 font-heading">{member.name}</h3>
-                <p className="text-primary-600 font-medium mb-4">{member.role}</p>
+                <p className="text-accent-600 font-medium mb-4">{member.role}</p>
 
                 {/* Quote */}
                 <blockquote className="relative mb-4">
-                  <span className="absolute -top-2 -left-2 text-4xl text-primary-200">"</span>
+                  <span className="absolute -top-2 -left-2 text-4xl text-accent-200">"</span>
                   <p className="text-gray-600 italic pl-4">{member.quote}</p>
                 </blockquote>
 
-                <p className="text-sm text-gray-500">{member.description}</p>
+                <p className="text-sm text-gray-500 mb-4">{member.description}</p>
+
+                {/* Specialties tags */}
+                <div className="flex flex-wrap gap-2">
+                  {member.specialties.map((specialty) => (
+                    <span
+                      key={specialty}
+                      className="px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-xs font-medium"
+                    >
+                      {specialty}
+                    </span>
+                  ))}
+                </div>
               </div>
             </motion.article>
           ))}

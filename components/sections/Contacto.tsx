@@ -22,21 +22,21 @@ export function Contacto() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    const message = `Hola, me gustaría pedir cita en Fisionarle.
+    const message = `Hola, me gustaría pedir cita en Nexum Fisioterapia.
 
 Nombre: ${formData.nombre}
 Teléfono: ${formData.telefono}
 Motivo: ${formData.motivo}
 Preferencia horaria: ${formData.horario}`
 
-    const whatsappUrl = `https://wa.me/34613004617?text=${encodeURIComponent(message)}`
+    const whatsappUrl = `https://wa.me/34613005617?text=${encodeURIComponent(message)}`
     window.open(whatsappUrl, '_blank')
   }
 
   return (
     <section id="contacto" className="py-24 lg:py-32 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
       {/* Decorative background */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-emerald-50 -skew-x-12 translate-x-1/4 hidden lg:block" />
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-accent-50 -skew-x-12 translate-x-1/4 hidden lg:block" />
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
@@ -46,8 +46,8 @@ Preferencia horaria: ${formData.horario}`
           viewport={{ once: true }}
           className="max-w-xl mb-16"
         >
-          <span className="inline-flex items-center gap-2 text-emerald-600 font-medium mb-4">
-            <span className="w-8 h-px bg-emerald-600" />
+          <span className="inline-flex items-center gap-2 text-accent-600 font-medium mb-4">
+            <span className="w-8 h-px bg-accent-600" />
             Contacto
           </span>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 font-heading">
@@ -79,7 +79,7 @@ Preferencia horaria: ${formData.horario}`
                     required
                     value={formData.nombre}
                     onChange={(e) => setFormData({ ...formData, nombre: e.target.value })}
-                    className="w-full px-0 py-4 bg-transparent border-0 border-b-2 border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-emerald-500 transition-colors text-lg"
+                    className="w-full px-0 py-4 bg-transparent border-0 border-b-2 border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-accent-500 transition-colors text-lg"
                     placeholder="Tu nombre"
                   />
                 </div>
@@ -93,7 +93,7 @@ Preferencia horaria: ${formData.horario}`
                     required
                     value={formData.telefono}
                     onChange={(e) => setFormData({ ...formData, telefono: e.target.value })}
-                    className="w-full px-0 py-4 bg-transparent border-0 border-b-2 border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-emerald-500 transition-colors text-lg"
+                    className="w-full px-0 py-4 bg-transparent border-0 border-b-2 border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-accent-500 transition-colors text-lg"
                     placeholder="600 000 000"
                   />
                 </div>
@@ -108,17 +108,16 @@ Preferencia horaria: ${formData.horario}`
                   id="motivo"
                   value={formData.motivo}
                   onChange={(e) => setFormData({ ...formData, motivo: e.target.value })}
-                  className="w-full px-0 py-4 bg-transparent border-0 border-b-2 border-gray-200 text-gray-900 focus:outline-none focus:border-emerald-500 transition-colors text-lg appearance-none cursor-pointer"
+                  className="w-full px-0 py-4 bg-transparent border-0 border-b-2 border-gray-200 text-gray-900 focus:outline-none focus:border-accent-500 transition-colors text-lg appearance-none cursor-pointer"
                   style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%239ca3af'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right center', backgroundSize: '20px' }}
                 >
                   <option value="">Selecciona una opción</option>
+                  <option value="Suelo pélvico/embarazo">Suelo pélvico/embarazo</option>
                   <option value="Dolor de espalda/cuello">Dolor de espalda/cuello</option>
-                  <option value="Lesión deportiva">Lesión deportiva</option>
-                  <option value="Fisioterapia pediátrica">Fisioterapia pediátrica</option>
-                  <option value="Fisioterapia neurológica">Fisioterapia neurológica</option>
-                  <option value="Fisioterapia geriátrica">Fisioterapia geriátrica</option>
+                  <option value="Fisioterapia invasiva">Fisioterapia invasiva (punción, electrólisis)</option>
+                  <option value="ATM/bruxismo">ATM/bruxismo</option>
                   <option value="Pilates terapéutico">Pilates terapéutico</option>
-                  <option value="Mareos/vértigos">Mareos/vértigos</option>
+                  <option value="Lesión deportiva">Lesión deportiva</option>
                   <option value="Otro">Otro</option>
                 </select>
               </div>
@@ -136,7 +135,7 @@ Preferencia horaria: ${formData.horario}`
                       onClick={() => setFormData({ ...formData, horario: option })}
                       className={`px-6 py-3 rounded-full font-medium transition-all ${
                         formData.horario === option
-                          ? 'bg-emerald-500 text-white shadow-lg shadow-emerald-500/25'
+                          ? 'bg-accent-500 text-white shadow-lg shadow-accent-500/25'
                           : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                       }`}
                     >
@@ -178,7 +177,7 @@ Preferencia horaria: ${formData.horario}`
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Ubicación de Fisionarle"
+                title="Ubicación de Nexum Fisioterapia"
               />
             </div>
 
@@ -187,11 +186,11 @@ Preferencia horaria: ${formData.horario}`
               href="https://www.google.com/maps/search/?api=1&query=Calle+Bailen+22+Alcazar+de+San+Juan"
               target="_blank"
               rel="noopener noreferrer"
-              className="block bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md hover:border-emerald-200 transition-all group"
+              className="block bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md hover:border-accent-200 transition-all group"
             >
               <div className="flex items-start gap-4">
-                <span className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-500 transition-colors">
-                  <svg className="w-6 h-6 text-emerald-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <span className="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-accent-500 transition-colors">
+                  <svg className="w-6 h-6 text-accent-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
@@ -205,18 +204,18 @@ Preferencia horaria: ${formData.horario}`
             </a>
 
             <a
-              href="tel:+34613004617"
-              className="block bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md hover:border-emerald-200 transition-all group"
+              href="tel:+34613005617"
+              className="block bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-md hover:border-accent-200 transition-all group"
             >
               <div className="flex items-center gap-4">
-                <span className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-emerald-500 transition-colors">
-                  <svg className="w-6 h-6 text-emerald-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <span className="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-accent-500 transition-colors">
+                  <svg className="w-6 h-6 text-accent-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </span>
                 <div>
                   <p className="font-semibold text-gray-900 mb-1">Teléfono</p>
-                  <p className="text-emerald-600 text-lg font-medium">613 00 46 17</p>
+                  <p className="text-accent-600 text-lg font-medium">613 00 56 17</p>
                 </div>
               </div>
             </a>

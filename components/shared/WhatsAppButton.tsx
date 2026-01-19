@@ -3,14 +3,14 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const messages = [
-  { label: 'Solicitar cita', text: 'Hola, me gustaria solicitar una cita en Fisionarle.' },
+  { label: 'Solicitar cita', text: 'Hola, me gustaria solicitar una cita en Nexum Fisioterapia.' },
   { label: 'Consultar precios', text: 'Hola, me gustaria informacion sobre los precios de vuestros servicios.' },
   { label: 'Informacion general', text: 'Hola, me gustaria informacion sobre vuestros servicios de fisioterapia.' },
 ]
 
 export function WhatsAppButton() {
   const [isOpen, setIsOpen] = useState(false)
-  const phone = '34613004617'
+  const phone = '34613005617'
 
   const sendMessage = (text: string) => {
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`

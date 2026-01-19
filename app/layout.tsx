@@ -20,27 +20,27 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://fisionarle.com'),
+  metadataBase: new URL('https://nexumfisioterapia.com'),
   title: {
-    default: 'Fisionarle | Fisioterapia en Alcazar de San Juan',
-    template: '%s | Fisionarle'
+    default: 'Nexum Fisioterapia | Fisioterapia en Alcazar de San Juan',
+    template: '%s | Nexum Fisioterapia'
   },
-  description: 'Centro de fisioterapia integral en Alcazar de San Juan. Especialistas en fisioterapia deportiva, pediatrica, neurologica y geriatrica. Pilates terapeutico. Pide cita: 613 00 46 17',
+  description: 'Centro de fisioterapia integral en Alcazar de San Juan. Especialistas en suelo pelvico, embarazo, fisioterapia manual, fisioterapia invasiva y pilates terapeutico. Pide cita: 613 00 56 17',
   keywords: [
     'fisioterapia Alcazar de San Juan',
     'fisioterapeuta Alcazar de San Juan',
-    'fisioterapia deportiva Ciudad Real',
-    'fisioterapia pediatrica Alcazar de San Juan',
-    'fisioterapia infantil Ciudad Real',
-    'fisioterapia neurologica Alcazar',
-    'rehabilitacion Alcazar de San Juan',
+    'suelo pelvico Ciudad Real',
+    'fisioterapia embarazo Alcazar de San Juan',
+    'fisioterapia invasiva Ciudad Real',
+    'neuromodulacion Alcazar',
+    'electrolisis percutanea Alcazar de San Juan',
     'pilates terapeutico Alcazar',
-    'tratamiento cervicalgia Alcazar',
-    'fisioterapia bebes Ciudad Real'
+    'fisioterapia manual Ciudad Real',
+    'ATM fisioterapia Alcazar'
   ],
-  authors: [{ name: 'Fisionarle' }],
-  creator: 'Fisionarle',
-  publisher: 'Fisionarle',
+  authors: [{ name: 'Nexum Fisioterapia' }],
+  creator: 'Nexum Fisioterapia',
+  publisher: 'Nexum Fisioterapia',
   formatDetection: {
     telephone: true,
     address: true,
@@ -49,23 +49,23 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'es_ES',
-    url: 'https://fisionarle.com',
-    siteName: 'Fisionarle',
-    title: 'Fisionarle | Fisioterapia con vocacion en Alcazar de San Juan',
-    description: 'Centro de fisioterapia integral. Especialistas en deportiva, pediatrica, neurologica y geriatrica. Vocacion y calidad humana. Pide cita: 613 00 46 17',
+    url: 'https://nexumfisioterapia.com',
+    siteName: 'Nexum Fisioterapia',
+    title: 'Nexum Fisioterapia | Fisioterapia integral en Alcazar de San Juan',
+    description: 'Centro de fisioterapia integral. Especialistas en suelo pelvico, embarazo, fisioterapia invasiva y pilates terapeutico. Pide cita: 613 00 56 17',
     images: [
       {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Fisionarle - Fisioterapia en Alcazar de San Juan'
+        alt: 'Nexum Fisioterapia - Fisioterapia en Alcazar de San Juan'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Fisionarle | Fisioterapia en Alcazar de San Juan',
-    description: 'Centro de fisioterapia integral. Especialistas en deportiva, pediatrica, neurologica y geriatrica.',
+    title: 'Nexum Fisioterapia | Fisioterapia en Alcazar de San Juan',
+    description: 'Centro de fisioterapia integral. Especialistas en suelo pelvico, embarazo, fisioterapia invasiva y pilates.',
     images: ['/images/twitter-image.jpg'],
   },
   robots: {
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     }
   },
   alternates: {
-    canonical: 'https://fisionarle.com'
+    canonical: 'https://nexumfisioterapia.com'
   },
 };
 
@@ -89,11 +89,11 @@ const schemaData = {
   '@graph': [
     {
       '@type': ['LocalBusiness', 'MedicalBusiness'],
-      '@id': 'https://fisionarle.com/#organization',
-      name: 'Fisionarle',
-      description: 'Centro de fisioterapia integral en Alcazar de San Juan especializado en fisioterapia deportiva, pediatrica, neurologica y geriatrica',
-      url: 'https://fisionarle.com',
-      telephone: '+34613004617',
+      '@id': 'https://nexumfisioterapia.com/#organization',
+      name: 'Nexum Fisioterapia',
+      description: 'Centro de fisioterapia integral en Alcazar de San Juan especializado en suelo pelvico, embarazo, fisioterapia manual, fisioterapia invasiva y pilates terapeutico',
+      url: 'https://nexumfisioterapia.com',
+      telephone: '+34613005617',
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'Calle Bailen, 22',
@@ -134,9 +134,9 @@ const schemaData = {
         }
       ],
       priceRange: '$$',
-      image: 'https://fisionarle.com/images/clinica.jpg',
+      image: 'https://nexumfisioterapia.com/images/clinica.jpg',
       sameAs: [],
-      medicalSpecialty: ['PhysicalTherapy', 'Pediatrics', 'Neurology', 'Geriatrics'],
+      medicalSpecialty: ['PhysicalTherapy', 'Obstetrics', 'Urology'],
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
         name: 'Servicios de Fisioterapia',
@@ -145,32 +145,32 @@ const schemaData = {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'MedicalProcedure',
-              name: 'Fisioterapia Deportiva',
-              description: 'Tratamiento especializado para lesiones deportivas y readaptacion'
+              name: 'Suelo Pelvico y Embarazo',
+              description: 'Tratamiento especializado en disfunciones del suelo pelvico, embarazo y postparto'
             }
           },
           {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'MedicalProcedure',
-              name: 'Fisioterapia Pediatrica',
-              description: 'Tratamiento para bebes y ninos, estimulacion temprana y desarrollo motor'
+              name: 'Fisioterapia Manual',
+              description: 'Terapia manual del aparato locomotor, tratamiento del dolor y disfunciones musculoesqueleticas'
             }
           },
           {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'MedicalProcedure',
-              name: 'Fisioterapia Neurologica',
-              description: 'Rehabilitacion post-ictus, Parkinson y enfermedades neurodegenerativas'
+              name: 'Fisioterapia Invasiva',
+              description: 'Puncion seca, electrolisis percutanea y neuromodulacion ecoguiada'
             }
           },
           {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'MedicalProcedure',
-              name: 'Fisioterapia Geriatrica',
-              description: 'Prevencion de caidas, mejora del equilibrio y calidad de vida'
+              name: 'Pilates Terapeutico',
+              description: 'Ejercicio terapeutico y pilates para rehabilitacion y prevencion'
             }
           }
         ]
@@ -178,11 +178,11 @@ const schemaData = {
     },
     {
       '@type': 'WebSite',
-      '@id': 'https://fisionarle.com/#website',
-      url: 'https://fisionarle.com',
-      name: 'Fisionarle',
+      '@id': 'https://nexumfisioterapia.com/#website',
+      url: 'https://nexumfisioterapia.com',
+      name: 'Nexum Fisioterapia',
       publisher: {
-        '@id': 'https://fisionarle.com/#organization'
+        '@id': 'https://nexumfisioterapia.com/#organization'
       }
     }
   ]

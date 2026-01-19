@@ -4,50 +4,47 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 // SVG Icons for each specialty
 const icons = {
-  embarazo: (
+  suelopelvico: (
     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4.5c-1.5 0-2.5 1-2.5 2.5 0 1.5 1 2.5 2.5 2.5s2.5-1 2.5-2.5c0-1.5-1-2.5-2.5-2.5z" />
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11c0 0 1 1 1 3.5 0 2.5-1.5 5-4 5s-4-2.5-4-5c0-2.5 1-3.5 1-3.5" />
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14.5v2M10.5 15.5h3" />
     </svg>
   ),
-  deportiva: (
+  manual: (
+    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11" />
+    </svg>
+  ),
+  invasiva: (
     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
     </svg>
   ),
-  pediatrica: (
-    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z" />
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" />
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 18c0 1.1.9 2 2 2h2c1.1 0 2-.9 2-2" />
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.93 4.93l2.83 2.83M19.07 4.93l-2.83 2.83" />
-    </svg>
-  ),
-  neurologica: (
-    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-    </svg>
-  ),
-  geriatrica: (
+  pilates: (
     <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+    </svg>
+  ),
+  atm: (
+    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
     </svg>
   ),
 }
 
 const especialidades = [
   {
-    id: 'embarazo',
-    icon: icons.embarazo,
-    title: 'Embarazo',
-    fullTitle: 'Embarazo y Suelo Pélvico',
+    id: 'suelopelvico',
+    icon: icons.suelopelvico,
+    title: 'Suelo Pélvico',
+    fullTitle: 'Suelo Pélvico y Embarazo',
     subtitle: 'Acompañamiento integral en la maternidad',
-    description: 'Especialistas en el cuidado de la mujer durante el embarazo, postparto y tratamiento de disfunciones del suelo pélvico. Te acompañamos en cada etapa.',
-    gradient: 'from-pink-500 to-fuchsia-500',
-    lightBg: 'bg-pink-50',
-    iconBg: 'bg-pink-100',
-    iconColor: 'text-pink-600',
+    description: 'Especialistas en el cuidado de la mujer durante el embarazo, postparto y tratamiento de disfunciones del suelo pélvico. Te acompañamos en cada etapa con las técnicas más avanzadas.',
+    gradient: 'from-accent-500 to-accent-600',
+    lightBg: 'bg-accent-50',
+    iconBg: 'bg-accent-100',
+    iconColor: 'text-accent-600',
     treatments: [
       'Preparación al parto y ejercicios de respiración',
       'Recuperación postparto y diástasis abdominal',
@@ -59,93 +56,93 @@ const especialidades = [
     stats: { patients: '+200', recovery: '96%' }
   },
   {
-    id: 'deportiva',
-    icon: icons.deportiva,
-    title: 'Deportiva',
-    fullTitle: 'Fisioterapia Deportiva',
-    subtitle: 'Recupera tu rendimiento',
-    description: 'Tratamiento especializado para deportistas de todos los niveles. Desde la prevención hasta la recuperación completa de lesiones.',
-    gradient: 'from-orange-500 to-amber-500',
-    lightBg: 'bg-orange-50',
-    iconBg: 'bg-orange-100',
-    iconColor: 'text-orange-600',
+    id: 'manual',
+    icon: icons.manual,
+    title: 'Manual',
+    fullTitle: 'Fisioterapia Manual',
+    subtitle: 'Tratamiento del aparato locomotor',
+    description: 'Máster en Fisioterapia Manual del Aparato Locomotor. Tratamiento especializado de disfunciones musculoesqueléticas con las técnicas manuales más efectivas.',
+    gradient: 'from-primary-500 to-primary-600',
+    lightBg: 'bg-primary-50',
+    iconBg: 'bg-primary-100',
+    iconColor: 'text-primary-600',
     treatments: [
-      'Lesiones deportivas: esguinces, roturas fibrilares, tendinitis',
-      'Recuperación post-quirúrgica deportiva',
-      'Prevención de lesiones',
-      'Readaptación al entrenamiento',
-      'Vendajes funcionales y kinesiotaping',
+      'Cervicalgias y lumbalgias',
+      'Movilizaciones articulares',
+      'Liberación miofascial',
+      'Tratamiento de contracturas',
+      'Estiramientos terapéuticos',
     ],
-    idealFor: 'Deportistas amateur y profesionales, runners, ciclistas, futbolistas',
-    stats: { patients: '+120', recovery: '95%' }
+    idealFor: 'Dolor de espalda, cuello, articulaciones y músculos',
+    stats: { patients: '+300', recovery: '94%' }
   },
   {
-    id: 'pediatrica',
-    icon: icons.pediatrica,
-    title: 'Pediátrica',
-    fullTitle: 'Fisioterapia Pediátrica',
-    subtitle: 'Tu hijo en las mejores manos',
-    description: 'Cuidado especializado para los más pequeños. Tratamientos suaves y efectivos adaptados a cada etapa del desarrollo.',
-    gradient: 'from-rose-500 to-pink-500',
-    lightBg: 'bg-rose-50',
-    iconBg: 'bg-rose-100',
-    iconColor: 'text-rose-600',
+    id: 'invasiva',
+    icon: icons.invasiva,
+    title: 'Invasiva',
+    fullTitle: 'Fisioterapia Invasiva',
+    subtitle: 'Técnicas avanzadas ecoguiadas',
+    description: 'Formación especializada en técnicas invasivas guiadas por ecografía. Punción seca, electrólisis percutánea y neuromodulación para resultados más rápidos y efectivos.',
+    gradient: 'from-secondary-500 to-secondary-600',
+    lightBg: 'bg-secondary-50',
+    iconBg: 'bg-secondary-100',
+    iconColor: 'text-secondary-600',
     treatments: [
-      'Estimulación temprana y desarrollo motor',
-      'Cólico del lactante y problemas digestivos',
-      'Tortícolis congénita y plagiocefalia',
-      'Retraso en el desarrollo psicomotor',
-      'Fisioterapia respiratoria infantil',
+      'Punción seca de puntos gatillo',
+      'Electrólisis percutánea (EPI/EPTE)',
+      'Neuromodulación percutánea ecoguiada',
+      'Ecografía musculoesquelética diagnóstica',
+      'Tratamiento de tendinopatías crónicas',
     ],
-    idealFor: 'Bebés prematuros, recién nacidos, niños de 0-14 años',
-    stats: { patients: '+80', recovery: '98%' }
+    idealFor: 'Tendinitis crónicas, dolor miofascial, lesiones que no mejoran',
+    stats: { patients: '+150', recovery: '92%' }
   },
   {
-    id: 'neurologica',
-    icon: icons.neurologica,
-    title: 'Neurológica',
-    fullTitle: 'Fisioterapia Neurológica',
-    subtitle: 'Recupera tu movilidad',
-    description: 'Rehabilitación especializada para pacientes con afectaciones del sistema nervioso. Recuperamos función y calidad de vida.',
-    gradient: 'from-blue-500 to-indigo-500',
-    lightBg: 'bg-blue-50',
-    iconBg: 'bg-blue-100',
-    iconColor: 'text-blue-600',
+    id: 'pilates',
+    icon: icons.pilates,
+    title: 'Pilates',
+    fullTitle: 'Pilates Terapéutico',
+    subtitle: 'Ejercicio para tu recuperación',
+    description: 'Pilates terapéutico adaptado a cada paciente. Ejercicio terapéutico personalizado para rehabilitación, prevención y mejora de la calidad de vida.',
+    gradient: 'from-accent-600 to-accent-700',
+    lightBg: 'bg-accent-50',
+    iconBg: 'bg-accent-100',
+    iconColor: 'text-accent-700',
     treatments: [
-      'Rehabilitación post-ictus (ACV)',
-      'Parkinson y enfermedades neurodegenerativas',
-      'Esclerosis múltiple y lesiones medulares',
-      'Parálisis cerebral',
-      'Recuperación de la marcha y el equilibrio',
+      'Clases grupales reducidas',
+      'Pilates suelo terapéutico',
+      'Fortalecimiento del core',
+      'Mejora postural',
+      'Rehabilitación activa',
     ],
-    idealFor: 'Pacientes con daño cerebral, enfermedades neurológicas',
-    stats: { patients: '+60', recovery: '85%' }
+    idealFor: 'Dolor de espalda, posturas incorrectas, complemento a fisioterapia',
+    stats: { patients: '+100', recovery: '95%' }
   },
   {
-    id: 'geriatrica',
-    icon: icons.geriatrica,
-    title: 'Geriátrica',
-    fullTitle: 'Fisioterapia Geriátrica',
-    subtitle: 'Calidad de vida siempre',
-    description: 'Atención personalizada para personas mayores. Mantenemos y mejoramos la autonomía para disfrutar de cada día.',
-    gradient: 'from-teal-500 to-emerald-500',
-    lightBg: 'bg-teal-50',
-    iconBg: 'bg-teal-100',
-    iconColor: 'text-teal-600',
+    id: 'atm',
+    icon: icons.atm,
+    title: 'ATM',
+    fullTitle: 'ATM y Dolor Orofacial',
+    subtitle: 'Articulación temporomandibular',
+    description: 'Tratamiento especializado de disfunciones de la articulación temporomandibular (ATM) y dolor orofacial. Bruxismo, dolor de mandíbula, cefaleas tensionales.',
+    gradient: 'from-primary-600 to-primary-700',
+    lightBg: 'bg-primary-50',
+    iconBg: 'bg-primary-100',
+    iconColor: 'text-primary-700',
     treatments: [
-      'Prevención de caídas y mejora del equilibrio',
-      'Mantenimiento de la movilidad articular',
-      'Tratamiento de artrosis y artritis',
-      'Rehabilitación post-fractura de cadera',
-      'Ejercicio terapéutico adaptado',
+      'Bruxismo y dolor mandibular',
+      'Cefaleas tensionales',
+      'Disfunción de la ATM',
+      'Dolor facial crónico',
+      'Tratamiento post-ortodoncia',
     ],
-    idealFor: 'Personas mayores de 65 años, residencias',
-    stats: { patients: '+150', recovery: '90%' }
+    idealFor: 'Bruxismo, dolor de mandíbula, cefaleas, ruidos articulares',
+    stats: { patients: '+80', recovery: '90%' }
   },
 ]
 
 export function Especialidades() {
-  const [activeTab, setActiveTab] = useState('embarazo')
+  const [activeTab, setActiveTab] = useState('suelopelvico')
   const activeEsp = especialidades.find(e => e.id === activeTab)!
 
   return (
